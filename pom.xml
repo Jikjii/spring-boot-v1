@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.jikjii</groupId>
 	<artifactId>Spring-boot-v1</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>Spring-boot-v1</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
