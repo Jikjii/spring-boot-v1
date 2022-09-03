@@ -1,0 +1,66 @@
+server:
+  port: '8082'
+
+spring:
+  profiles:
+    active: qa
+
+---
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/dcbapp
+    password: mars2001.
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+  welcome:
+    message: Welcome to Jikjii!
+  config:
+    activate:
+      on-profile: dev
+
+---
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/dcbapp-qa
+    password: mars2001.
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+  welcome:
+    message: Welcome to Jikjii!
+  config:
+    activate:
+      on-profile: qa
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+---
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/dcbapp-prod
+    password: mars2001.
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+  welcome:
+    message: Welcome to Jikjii!
+  config:
+    activate:
+      on-profile: prod
